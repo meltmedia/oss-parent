@@ -60,8 +60,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.source.version>1.6</java.source.version>
     <java.target.version>1.6</java.target.version>
-    <copywrite.year>2012</copywrite.year>
-    <copywrite.owner>meltmedia</copywrite.owner>
+    <copyright.year>2012</copyright.year>
+    <copyright.owner>meltmedia</copyright.owner>
   </properties>
 
   <build>
