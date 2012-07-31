@@ -62,6 +62,7 @@
     <java.target.version>1.6</java.target.version>
     <copyright.year>2012</copyright.year>
     <copyright.owner>meltmedia</copyright.owner>
+    <license.header>${basedir}/src/etc/header.txt</license.header>
   </properties>
 
   <build>
@@ -349,7 +350,7 @@
           <artifactId>maven-license-plugin</artifactId>
           <version>1.9.0</version>
           <configuration>
-            <header>src/etc/header.txt</header>
+            <header>${license.header}</header>
             <properties>
               <copyright.year>${copyright.year}</copyright.year>
               <copyright.owner>${copyright.owner}</copyright.owner>
