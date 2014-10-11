@@ -66,6 +66,14 @@
   </properties>
 
   <build>
+    <extensions>
+      <extension>
+        <groupId>com.xiantrimble.maven</groupId>
+        <artifactId>maven-format-lifecycle</artifactId>
+        <version>1.0.0</version>
+      </extension>
+    </extensions>
+  
     <pluginManagement>
       <plugins>
         <plugin>
@@ -118,6 +126,12 @@
           <version>2.9.1</version>
           <configuration>
             <!-- We have to disable the java api link, since Oracle has changed the url to the core javadocs. It's not easy to specify a different url for each JDK we build against, so we disable it entirely. -->
+            <doclet>ch.raffael.doclets.pegdown.PegdownDoclet</doclet>
+            <docletArtifact>
+              <groupId>ch.raffael.pegdown-doclet</groupId>
+              <artifactId>pegdown-doclet</artifactId>
+              <version>1.1</version>
+            </docletArtifact>
             <detectJavaApiLink>false</detectJavaApiLink>
           </configuration>
         </plugin>
@@ -230,22 +244,45 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>com.mycila.maven-license-plugin</groupId>
-          <artifactId>maven-license-plugin</artifactId>
-          <version>1.9.0</version>
+          <groupId>com.mycila</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>2.6</version>
           <configuration>
-            <header>${license.header}</header>
+            <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
             <properties>
-              <copyright.year>${copyright.year}</copyright.year>
-              <copyright.owner>${copyright.owner}</copyright.owner>
+              <project.inceptionYear>${project.inceptionYear}</project.inceptionYear>
+              <owner>${copyright.owner}</owner>
+              <email>${copyright.email}</email>
             </properties>
             <dryRun>false</dryRun>
             <goalPrefix>license</goalPrefix>
             <strictCheck>true</strictCheck>
+            <excludes>
+              <exclude>**/LICENSE</exclude>
+              <exclude>**/NOTICE</exclude>
+              <exclude>**/README</exclude>
+              <exclude>src/test/resources/**</exclude>
+              <exclude>src/main/resources/**</exclude>
+            </excludes>
           </configuration>
+          <executions>
+            <execution>
+              <phase>format</phase>
+              <goals>
+                <goal>format</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+
   </build>
 
   <reporting>
@@ -253,7 +290,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.8</version>
+        <version>2.9.1</version>
         <configuration>
           <!-- We have to disable the java api link, since Oracle has changed the url to the core javadocs.
                It's not easy to specify a different url for each JDK we build against, so we disable it entirely.
