@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright 2012 meltmedia
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+    Copyright (C) 2012 meltmedia (christian.trimble@meltmedia.com)
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
@@ -37,6 +39,7 @@
   </organization>
 
   <url>http://www.meltmedia.com/</url>
+  <inceptionYear>2012</inceptionYear>
 
   <prerequisites>
     <maven>3.2.2</maven>
@@ -60,9 +63,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.source.version>1.8</java.source.version>
     <java.target.version>1.8</java.target.version>
-    <copyright.year>2014</copyright.year>
     <copyright.owner>meltmedia</copyright.owner>
-    <license.header>${basedir}/src/etc/header.txt</license.header>
+    <copyright.email>christian.trimble@meltmedia.com</copyright.email>
   </properties>
 
   <build>
