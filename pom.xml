@@ -17,47 +17,37 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
     <version>7</version>
   </parent>
-
   <groupId>com.meltmedia</groupId>
   <artifactId>meltmedia-oss</artifactId>
   <version>2-SNAPSHOT</version>
   <packaging>pom</packaging>
-
   <name>meltmedia OSS Parent POM</name>
-
   <organization>
     <name>meltmedia</name>
     <url>http://meltmedia.com/</url>
   </organization>
-
   <url>http://www.meltmedia.com/</url>
   <inceptionYear>2012</inceptionYear>
-
   <prerequisites>
     <maven>3.2.2</maven>
   </prerequisites>
-
   <scm>
     <connection>scm:git:git@github.com:meltmedia/oss-parent.git</connection>
     <developerConnection>scm:git:git@github.com:meltmedia/oss-parent.git</developerConnection>
     <url>git@github.com:meltmedia/oss-parent.git</url>
   </scm>
-
   <licenses>
     <license>
       <name>Apache License Version 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
-
   <repositories>
     <repository>
       <releases>
@@ -71,7 +61,6 @@
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </repository>
   </repositories>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -80,7 +69,6 @@
     <copyright.owner>meltmedia</copyright.owner>
     <copyright.email>christian.trimble@meltmedia.com</copyright.email>
   </properties>
-
   <build>
     <extensions>
       <extension>
@@ -89,7 +77,6 @@
         <version>1.0.0</version>
       </extension>
     </extensions>
-  
     <pluginManagement>
       <plugins>
         <plugin>
@@ -183,8 +170,8 @@
               <groupId>org.apache.maven.doxia</groupId>
               <artifactId>doxia-module-markdown</artifactId>
               <version>1.3</version>
-          </dependency>
-        </dependencies>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -275,9 +262,7 @@
         <artifactId>license-maven-plugin</artifactId>
       </plugin>
     </plugins>
-
   </build>
-
   <reporting>
     <plugins>
       <plugin>
@@ -330,5 +315,4 @@
       </plugin>
     </plugins>
   </reporting>
-
 </project>
